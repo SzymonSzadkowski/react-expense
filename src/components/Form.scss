@@ -1,0 +1,38 @@
+.form-box {
+  margin-top: 15px;
+  display: grid;
+  gap: 10px;
+
+  &--title {
+    border-bottom: 1px solid lightgray;
+  }
+
+  &--form {
+    display: grid;
+    gap: 10px;
+
+    &--title,
+    &--amount {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+    }
+
+    &--btn {
+      padding: 5px 10px;
+      background: lightseagreen;
+      border: none;
+      box-shadow: 0 0 10px 0 lightseagreen;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: lightskyblue;
+        color: gray;
+        box-shadow: 0 0 10px 0 lightskyblue;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@mixin box {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+.total {
+  letter-spacing: 2px;
+  margin: 5px 0;
+  font-size: 1.5rem;
+  &::before {
+    content: "$";
+  }
+}
+
+.spending-box {
+  border: 1px solid rgba(211, 211, 211, 0.5);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 0 lightgray;
+
+  &--income {
+    @include box;
+    border-right: 1px solid lightgray;
+    p {
+      color: green;
+      &::before {
+        content: "$";
+      }
+    }
+  }
+
+  &--expense {
+    @include box;
+    p {
+      color: red;
+      &::before {
+        content: "$";
+      }
+    }
+  }
+}
